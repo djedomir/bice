@@ -22,3 +22,11 @@ install:
 script:
   - npm run test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
   - ng build --prod --output-path docs --base-href https://djedomir.github.com/bice/ 
+ 
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist/bice
+  on:
+    branch: master
