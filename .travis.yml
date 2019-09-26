@@ -21,3 +21,4 @@ install:
 
 script:
   - npm run test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
+  - ng build --prod --output-path docs --base-href https://djedomir.github.com/bice/ 
